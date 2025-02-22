@@ -6678,7 +6678,6 @@
     font-weight: var(--waping-fontWeights-semibold);
     color: var(--waping-colors-gray-600);
     flex-direction: column;
-    margin-inline-end: 50px;
     background: unset;
     min-width: max-content;
 }
