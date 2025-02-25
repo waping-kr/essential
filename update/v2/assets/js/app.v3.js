@@ -171,3 +171,14 @@ document.querySelector('.hover-target').addEventListener('mouseover', function()
 document.querySelector('.hover-target').addEventListener('mouseout', function() {
   document.querySelector('.blur-content').style.filter = 'blur(5px)';
 });
+
+function maxLengthCheck(object) {
+  if (object.value.length > object.maxLength) {
+      object.value = object.value.slice(0, object.maxLength);
+  }
+}
+
+function isValid() {
+  var invl = document.querySelectorAll(":invalid");
+  return invl.length === 0;
+}

@@ -15577,3 +15577,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 .blur-input:not(:hover) {
     filter: blur(5px);
 }
+
+input[type="text"]:invalid, input[type="number"]:invalid, input[type="password"]:invalid, input[type="date"]:invalid {
+    border: 1px solid #ff2727;
+}
