@@ -3587,6 +3587,7 @@
     margin-top: 60px;
     margin-bottom: 40px;
     border-radius: 30px;
+    animation: slideUpIn 0.5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 @media screen and (min-width: 768px) {
@@ -3599,6 +3600,18 @@
     .rocat-xyz-ps5lfl {
         padding-inline-end: 0px;
     }
+}
+
+.rocat-xyz-pvnabf {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background: var(--waping-colors-secondaryGray-300);
+    border-radius: 30px;
+    margin-inline: auto 6px;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
 }
 
 .rocat-xyz-exwyyx {
@@ -11859,6 +11872,7 @@
     justify-content: center;
     align-items: flex-start;
     overflow: auto;
+    animation: slideUp 0.5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 .rocat-xyz-hxtskf {
@@ -14151,6 +14165,35 @@ div.inline-container div.container.right {
     }
 }
 
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
 .resize-triggers {
     animation: 1ms ease 0s 1 normal none running resizeanim;
     visibility: hidden;
@@ -15581,3 +15624,69 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 input[type="text"]:invalid, input[type="number"]:invalid, input[type="password"]:invalid, input[type="date"]:invalid {
     border: 1px solid #ff2727;
 }
+
+/* 음악 재생 버튼 */
+#player-container {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.music_button {
+    width: 75px;
+    height: 75px;
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: #444dff;
+    box-shadow: rgba(112, 144, 176, 0.18) 14px 17px 40px 4px;
+}
+/* 음악 재생 버튼 */
+
+/* 충전 페이지 비회전 화면 */
+.charge-blur-wrap {
+    position: relative;
+}
+
+.charge-blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    border-radius: 16px;
+}
+
+.charge-blur-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+}
+
+.charge-blur-center .icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.charge-blur-center .text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+/* 충전 페이지 비회전 화면 */
