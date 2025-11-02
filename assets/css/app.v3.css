@@ -12004,7 +12004,7 @@
     outline-offset: 2px;
     width: auto;
     line-height: 1.2;
-    border-radius: 10px;
+    border-radius: 30px;
     font-weight: var(--waping-fontWeights-semibold);
     transition-property: var(--waping-transition-property-common);
     transition-duration: var(--waping-transition-duration-normal);
@@ -12016,7 +12016,8 @@
     border: 1px solid currentcolor;
     color: var(--waping-colors-gray-100);
     background: var(--waping-colors-secondaryGray-400);
-    padding: 0px;
+    margin-inline: auto 6px;
+    padding: 6px;
 }
 
 .rocat-xyz-1x2xbu2 {
